@@ -42,13 +42,13 @@ cb_date.set(date_list[0])
 label_item = ttk.Label(frame2, text='用途')
 label_money = ttk.Label(frame2, text='金額')
 
-item = StringVar()
-item_entry = ttk.Entry(frame2, textvariable = item, width = 20)
+module = ('ご飯', '勉強', '本', 'ゲーム', 'グッズ', 'その他')
+item_entry = ttk.Combobox(frame2, values = module, width = 20)
 
 money = StringVar()
 money_entry = ttk.Entry(frame2, textvariable = money, width = 20)
 
-button_save = ttk.Button(frame3, text='保存', command=lambda: change_date(item.get(), money.get()))
+button_save = ttk.Button(frame3, text='保存', command=lambda: change_date(item_entry.get(), money.get()))
 
 frame1.pack()
 cb_year.pack(side='left')

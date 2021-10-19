@@ -2,7 +2,7 @@ import openpyxl
 import datetime
 
 def moneycontrol(date, item, price):
-    wb = openpyxl.load_workbook('家計簿.xlsx')
+    wb = openpyxl.load_workbook('家計簿test.xlsx')
     sheet = wb['Sheet1']
 
     cell = sheet.max_row + 1
@@ -11,7 +11,7 @@ def moneycontrol(date, item, price):
     sheet['B{}'.format(cell)] = item
     sheet['C{}'.format(cell)] = price
 
-    wb.save('家計簿.xlsx')
+    wb.save('家計簿test.xlsx')
 
 
 
